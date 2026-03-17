@@ -4119,11 +4119,12 @@
 
                     var originalHTML = submitBtn.innerHTML;
                     submitBtn.innerHTML = '<span>Sending Your Message...</span>';
-                    submitBtn.classList.add('sending');
+                    submitBtn.style.opacity = '0.8';
+                    submitBtn.style.pointerEvents = 'none';
 
                     var formData = new FormData(form);
 
-                    fetch(form.action, {
+                    fetch('https://formspree.io/f/xgonpzzg', {
                         method: 'POST',
                         body: formData,
                         headers: {
@@ -4132,31 +4133,41 @@
                     })
                     .then(function(response) {
                         if (response.ok) {
-                            submitBtn.innerHTML = '<span>&#10003; Message Sent Successfully!</span>';
-                            submitBtn.classList.remove('sending');
-                            submitBtn.classList.add('sent');
-                            form.reset();
-
-                            setTimeout(function() {
-                                submitBtn.innerHTML = originalHTML;
-                                submitBtn.classList.remove('sent');
-                            }, 4000);
+                            return response.json();
                         } else {
-                            throw new Error('Form submission failed');
+                            return response.json().then(function(data) {
+                                throw new Error(data.error || 'Form submission failed');
+                            });
                         }
                     })
-                    .catch(function(error) {
-                        submitBtn.innerHTML = '<span>Error - Please Try Again</span>';
-                        submitBtn.classList.remove('sending');
+                    .then(function(data) {
+                        submitBtn.innerHTML = '<span>&#10003; Message Sent Successfully!</span>';
+                        submitBtn.style.opacity = '1';
+                        submitBtn.style.pointerEvents = 'auto';
+                        submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #66BB6A)';
+                        form.reset();
 
                         setTimeout(function() {
                             submitBtn.innerHTML = originalHTML;
-                        }, 3000);
+                            submitBtn.style.background = '';
+                        }, 5000);
+                    })
+                    .catch(function(error) {
+                        console.error('Form error:', error);
+                        submitBtn.innerHTML = '<span>&#10007; Error - Please Try Again</span>';
+                        submitBtn.style.opacity = '1';
+                        submitBtn.style.pointerEvents = 'auto';
+                        submitBtn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+
+                        setTimeout(function() {
+                            submitBtn.innerHTML = originalHTML;
+                            submitBtn.style.background = '';
+                        }, 4000);
                     });
                 });
             }
         })();
-
+        
         // ==========================================
         // LAZY LOAD IMAGES
         // ==========================================
