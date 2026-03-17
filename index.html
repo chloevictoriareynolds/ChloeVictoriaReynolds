@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chloe Victoria Reynolds - Elite Book Marketing Specialist helping authors hit Amazon Top 100. 30+ bestsellers launched, $2M+ in author revenue. Proven launch strategies for serious authors.">
+    <meta name="keywords" content="book marketing, bestseller launch, Amazon optimization, book launch strategy, author marketing, book promotion">
+    <meta name="author" content="Chloe Victoria Reynolds">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Chloe Victoria Reynolds | Elite Book Marketing Specialist">
+    <meta property="og:description" content="I help authors hit Amazon Top 100 without paid ads or a giant platform. 30+ bestsellers launched since 2021.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Chloe Victoria Reynolds | Elite Book Marketing Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ========================================
@@ -121,7 +131,7 @@
             justify-content: center;
             align-items: center;
             z-index: 999999;
-            transition: opacity 1s ease, visibility 1s ease;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
 
         .preloader.loaded {
@@ -350,6 +360,8 @@
             cursor: pointer;
             z-index: 10001;
             padding: 10px;
+            background: none;
+            border: none;
         }
 
         .hamburger span {
@@ -392,7 +404,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(183, 110, 121, 0.05) 0%, transparent 40%),
                 radial-gradient(circle at 40% 80%, rgba(201, 169, 98, 0.05) 0%, transparent 40%);
@@ -409,39 +421,46 @@
             pointer-events: none;
         }
 
-        .particle {
+        .particle-wrapper {
             position: absolute;
-            background: var(--accent-gold);
-            border-radius: 50%;
-            opacity: 0.15;
             animation: floatParticle 20s infinite ease-in-out;
         }
 
-        .particle:nth-child(1) { width: 8px; height: 8px; left: 10%; top: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 12px; height: 12px; left: 20%; top: 70%; animation-delay: 3s; }
-        .particle:nth-child(3) { width: 6px; height: 6px; left: 70%; top: 30%; animation-delay: 6s; }
-        .particle:nth-child(4) { width: 10px; height: 10px; left: 80%; top: 60%; animation-delay: 9s; }
-        .particle:nth-child(5) { width: 14px; height: 14px; left: 30%; top: 50%; animation-delay: 2s; }
-        .particle:nth-child(6) { width: 8px; height: 8px; left: 90%; top: 20%; animation-delay: 5s; }
-        .particle:nth-child(7) { width: 10px; height: 10px; left: 50%; top: 80%; animation-delay: 8s; }
-        .particle:nth-child(8) { width: 6px; height: 6px; left: 60%; top: 10%; animation-delay: 4s; }
+        .particle-wrapper .particle-dot {
+            background: var(--accent-gold);
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+
+        .particle-wrapper:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .particle-wrapper:nth-child(1) .particle-dot { width: 8px; height: 8px; }
+        .particle-wrapper:nth-child(2) { left: 20%; top: 70%; animation-delay: 3s; }
+        .particle-wrapper:nth-child(2) .particle-dot { width: 12px; height: 12px; }
+        .particle-wrapper:nth-child(3) { left: 70%; top: 30%; animation-delay: 6s; }
+        .particle-wrapper:nth-child(3) .particle-dot { width: 6px; height: 6px; }
+        .particle-wrapper:nth-child(4) { left: 80%; top: 60%; animation-delay: 9s; }
+        .particle-wrapper:nth-child(4) .particle-dot { width: 10px; height: 10px; }
+        .particle-wrapper:nth-child(5) { left: 30%; top: 50%; animation-delay: 2s; }
+        .particle-wrapper:nth-child(5) .particle-dot { width: 14px; height: 14px; }
+        .particle-wrapper:nth-child(6) { left: 90%; top: 20%; animation-delay: 5s; }
+        .particle-wrapper:nth-child(6) .particle-dot { width: 8px; height: 8px; }
+        .particle-wrapper:nth-child(7) { left: 50%; top: 80%; animation-delay: 8s; }
+        .particle-wrapper:nth-child(7) .particle-dot { width: 10px; height: 10px; }
+        .particle-wrapper:nth-child(8) { left: 60%; top: 10%; animation-delay: 4s; }
+        .particle-wrapper:nth-child(8) .particle-dot { width: 6px; height: 6px; }
 
         @keyframes floatParticle {
             0%, 100% {
                 transform: translateY(0) translateX(0) rotate(0deg);
-                opacity: 0.15;
             }
             25% {
                 transform: translateY(-40px) translateX(20px) rotate(90deg);
-                opacity: 0.25;
             }
             50% {
                 transform: translateY(-20px) translateX(-10px) rotate(180deg);
-                opacity: 0.15;
             }
             75% {
                 transform: translateY(-60px) translateX(15px) rotate(270deg);
-                opacity: 0.2;
             }
         }
 
@@ -1379,7 +1398,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 20%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 90% 80%, rgba(183, 110, 121, 0.08) 0%, transparent 50%);
             pointer-events: none;
@@ -1605,153 +1624,6 @@
             line-height: 1.6;
         }
 
-        .results-case-studies {
-            margin-top: 60px;
-        }
-
-        .case-study-card {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
-            background: var(--bg-cream);
-            border-radius: 30px;
-            padding: 60px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition-smooth);
-        }
-
-        .case-study-card:hover {
-            box-shadow: var(--shadow-medium);
-        }
-
-        .case-study-visual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .case-study-book {
-            width: 180px;
-            height: 270px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            transition: transform 0.5s ease;
-        }
-
-        .case-study-card:hover .case-study-book {
-            transform: rotate(-3deg) scale(1.05);
-        }
-
-        .case-study-book img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .case-study-author-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--accent-gold);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .case-study-author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-        }
-
-        .case-study-content h3 {
-            font-size: 1.8rem;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-        }
-
-        .case-study-genre {
-            font-size: 0.9rem;
-            color: var(--accent-rose);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .case-study-description {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.9;
-            margin-bottom: 30px;
-        }
-
-        .case-study-results-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .case-result-item {
-            text-align: center;
-            padding: 25px 20px;
-            background: var(--text-white);
-            border-radius: 15px;
-        }
-
-        .case-result-item h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 8px;
-        }
-
-        .case-result-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .case-study-contact {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .case-study-contact a {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            background: var(--gradient-gold);
-            color: var(--primary-dark);
-            border-radius: 50px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: var(--transition-smooth);
-        }
-
-        .case-study-contact a:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .case-study-contact .email-link {
-            background: transparent;
-            border: 2px solid var(--primary-dark);
-            color: var(--primary-dark);
-        }
-
-        .case-study-contact .email-link:hover {
-            background: var(--primary-dark);
-            color: var(--text-white);
-            box-shadow: var(--shadow-soft);
-        }
-
         /* ========================================
            TESTIMONIALS SECTION - PREMIUM
         ======================================== */
@@ -1762,7 +1634,7 @@
         }
 
         .testimonials::before {
-            content: '"';
+            content: '\201C';
             position: absolute;
             top: 100px;
             left: 5%;
@@ -2086,6 +1958,11 @@
             justify-content: space-between;
             align-items: center;
             transition: var(--transition-smooth);
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font: inherit;
         }
 
         .faq-question:hover {
@@ -2127,10 +2004,6 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.6s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 800px;
         }
 
         .faq-answer-content {
@@ -2191,7 +2064,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 30%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 70%, rgba(183, 110, 121, 0.08) 0%, transparent 50%);
             pointer-events: none;
@@ -2283,7 +2156,7 @@
             color: var(--accent-gold);
         }
 
-        .contact-Chloe-card {
+        .contact-chloe-card {
             display: flex;
             align-items: center;
             gap: 30px;
@@ -2293,7 +2166,7 @@
             border-radius: 25px;
         }
 
-        .contact-Chloe-card img {
+        .contact-chloe-card img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
@@ -2302,13 +2175,13 @@
             border: 4px solid var(--accent-gold);
         }
 
-        .contact-Chloe-info h4 {
+        .contact-chloe-info h4 {
             font-size: 1.4rem;
             color: var(--text-white);
             margin-bottom: 8px;
         }
 
-        .contact-Chloe-info p {
+        .contact-chloe-info p {
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
@@ -2412,6 +2285,15 @@
         .btn-submit svg {
             width: 20px;
             height: 20px;
+        }
+
+        .btn-submit.sending {
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .btn-submit.sent {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
         }
 
         /* ========================================
@@ -2544,6 +2426,7 @@
             transition: var(--transition-smooth);
             z-index: 9999;
             box-shadow: var(--shadow-gold);
+            border: none;
         }
 
         .scroll-top.visible {
@@ -2699,15 +2582,6 @@
                 margin: 0 auto;
             }
 
-            .case-study-card {
-                grid-template-columns: 1fr;
-            }
-
-            .case-study-visual {
-                flex-direction: row;
-                justify-content: center;
-            }
-
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -2765,10 +2639,6 @@
             }
 
             .difference-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-study-results-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -2857,68 +2727,61 @@
     </style>
 </head>
 <body>
-
-    <!-- =============================================
-         PRELOADER
-    ============================================= -->
+    <!-- PRELOADER -->
     <div class="preloader" id="preloader">
-        <div class="preloader-logo">Chloe Anne <span>Foster</span></div>
+        <div class="preloader-logo">Chloe Victoria <span>Reynolds</span></div>
         <div class="preloader-line"></div>
         <p class="preloader-text">Transforming Books Into Bestsellers</p>
     </div>
 
-    <!-- =============================================
-         NAVIGATION
-    ============================================= -->
-    <nav class="navbar" id="navbar">
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a href="#home" class="logo">Chloe<span>.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
-                <li><a href="#services" onclick="closeMenu()">Services</a></li>
-                <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
-                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
-                <li><a href="#contact" onclick="closeMenu()" class="nav-cta">Get In Touch</a></li>
+            <a href="#home" class="logo" aria-label="Chloe Victoria Reynolds - Home">Chloe<span>.</span></a>
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="#contact" class="nav-cta" role="menuitem">Get In Touch</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- =============================================
-         HERO SECTION
-    ============================================= -->
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="hero-bg-pattern"></div>
         <div class="hero-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
+            <div class="particle-wrapper"><div class="particle-dot"></div></div>
         </div>
-        
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
                     Elite Book Marketing Specialist
                 </div>
-                
+
                 <h1>I Help Authors Hit <span class="highlight">Amazon Top 100</span> Without Paid Ads or a Giant Platform</h1>
-                
+
                 <p class="hero-description">Proven launch strategies and evergreen marketing systems for serious authors who refuse to settle for crickets. I've helped launch 30+ bestsellers since 2021, generating over $2 million in author revenue. Let's make your book the next success story.</p>
-                
+
                 <div class="hero-stats">
                     <div class="hero-stat">
-                        <span class="hero-stat-number">30+</span>
+                        <span class="hero-stat-number" data-target="30" data-suffix="+">30+</span>
                         <span class="hero-stat-label">Bestsellers Launched</span>
                     </div>
                     <div class="hero-stat">
@@ -2930,7 +2793,7 @@
                         <span class="hero-stat-label">Books Sold</span>
                     </div>
                 </div>
-                
+
                 <div class="hero-cta-group">
                     <a href="#contact" class="btn btn-primary">
                         <span>Start Your Project</span>
@@ -2943,27 +2806,27 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="hero-image-section">
                 <div class="hero-image-container">
                     <div class="hero-image-frame"></div>
                     <div class="hero-image-wrapper">
-                        <img src="hello.jpeg" alt="Chloe Victoria Reynolds - Elite Book Marketing Specialist">
+                        <img src="hello.jpeg" alt="Chloe Victoria Reynolds - Elite Book Marketing Specialist helping authors achieve bestseller status" loading="eager">
                     </div>
-                    
+
                     <div class="hero-floating-card card-1">
                         <div class="floating-stat">
-                            <div class="floating-stat-icon">🏆</div>
+                            <div class="floating-stat-icon">&#127942;</div>
                             <div class="floating-stat-content">
                                 <h4>Amazon #1</h4>
                                 <p>Multiple Categories</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="hero-floating-card card-2">
                         <div class="floating-stat">
-                            <div class="floating-stat-icon">⭐</div>
+                            <div class="floating-stat-icon">&#11088;</div>
                             <div class="floating-stat-content">
                                 <h4>USA Today</h4>
                                 <p>Bestseller Lists</p>
@@ -2976,9 +2839,7 @@
         </div>
     </section>
 
-    <!-- =============================================
-         TRUST BAR
-    ============================================= -->
+    <!-- TRUST BAR -->
     <div class="trust-bar">
         <div class="container">
             <div class="trust-bar-content">
@@ -2986,7 +2847,7 @@
                 <div class="trust-logos">
                     <span class="trust-logo">Penguin Random House</span>
                     <span class="trust-logo">HarperCollins</span>
-                    <span class="trust-logo">Simon & Schuster</span>
+                    <span class="trust-logo">Simon &amp; Schuster</span>
                     <span class="trust-logo">Hachette</span>
                     <span class="trust-logo">40+ Independent Publishers</span>
                 </div>
@@ -2994,9 +2855,7 @@
         </div>
     </div>
 
-    <!-- =============================================
-         ABOUT SECTION - EXTENDED
-    ============================================= -->
+    <!-- ABOUT SECTION -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
@@ -3004,7 +2863,7 @@
                     <div class="about-image-container">
                         <div class="about-decor"></div>
                         <div class="about-image-main">
-                            <img src="hello.jpeg" alt="Chloe Victoria Reynolds">
+                            <img src="hello.jpeg" alt="Chloe Victoria Reynolds at her desk working on a book marketing campaign" loading="lazy">
                         </div>
                         <div class="about-experience-card">
                             <h3>7+</h3>
@@ -3012,54 +2871,54 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-content reveal-right">
                     <span class="section-badge">About Me</span>
-                    <h2>Hi, I'm Chloe — And I Turn Good Books Into <span>Bestsellers</span></h2>
-                    
-                    <p class="about-intro">I didn't start out as a book marketing specialist. I started as a reader who fell in love with stories — and then I met incredible authors who had written amazing books… that no one was buying. It broke my heart.</p>
-                    
+                    <h2>Hi, I'm Chloe &mdash; And I Turn Good Books Into <span>Bestsellers</span></h2>
+
+                    <p class="about-intro">I didn't start out as a book marketing specialist. I started as a reader who fell in love with stories &mdash; and then I met incredible authors who had written amazing books&hellip; that no one was buying. It broke my heart.</p>
+
                     <p class="about-story">So I got obsessed. I studied every launch strategy, every Amazon algorithm hack, every bestseller campaign I could find. I tested everything. I failed a lot. And eventually, <strong>I cracked the code.</strong></p>
-                    
-                    <p class="about-story">Now, I've helped <strong>30+ authors hit major bestseller lists</strong> — including debut novelists with zero platform, self-published authors competing with Big 5 publishers, and traditionally published authors whose publishers didn't market their books.</p>
-                    
+
+                    <p class="about-story">Now, I've helped <strong>30+ authors hit major bestseller lists</strong> &mdash; including debut novelists with zero platform, self-published authors competing with Big 5 publishers, and traditionally published authors whose publishers didn't market their books.</p>
+
                     <p class="about-story">I've generated over <strong>$2 million in author revenue</strong>, helped sell more than <strong>500,000 books</strong>, and built a reputation as one of the most results-driven book marketing specialists in the industry. But more importantly, I've helped authors quit their day jobs, land speaking gigs, sell foreign rights, and build sustainable careers doing what they love.</p>
-                    
+
                     <div class="about-beliefs">
                         <h4>What I Believe</h4>
                         <ul>
-                            <li><span>✓</span> Your book deserves to be read. If you wrote something great, it's my job to get it in front of readers who will love it.</li>
-                            <li><span>✓</span> Marketing doesn't have to feel sleazy. You don't need to spam people or hustle 24/7. You just need a proven system.</li>
-                            <li><span>✓</span> Platform is overrated. I've launched bestsellers for authors with 50 followers. Platform helps, but it's not required.</li>
-                            <li><span>✓</span> Data beats guesswork. I don't "hope" strategies work. I test, track, and optimize based on real performance data.</li>
-                            <li><span>✓</span> Your success is my reputation. Every book I launch is a case study for the next author. I treat your book like it's mine.</li>
+                            <li><span>&#10003;</span> Your book deserves to be read. If you wrote something great, it's my job to get it in front of readers who will love it.</li>
+                            <li><span>&#10003;</span> Marketing doesn't have to feel sleazy. You don't need to spam people or hustle 24/7. You just need a proven system.</li>
+                            <li><span>&#10003;</span> Platform is overrated. I've launched bestsellers for authors with 50 followers. Platform helps, but it's not required.</li>
+                            <li><span>&#10003;</span> Data beats guesswork. I don't "hope" strategies work. I test, track, and optimize based on real performance data.</li>
+                            <li><span>&#10003;</span> Your success is my reputation. Every book I launch is a case study for the next author. I treat your book like it's mine.</li>
                         </ul>
                     </div>
-                    
+
                     <div class="about-features">
                         <div class="about-feature">
-                            <div class="about-feature-icon">📚</div>
+                            <div class="about-feature-icon">&#127942;</div>
                             <div class="about-feature-content">
                                 <h4>30+ Bestsellers</h4>
                                 <p>Launched to #1 on Amazon across multiple categories and genres</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">🎯</div>
+                            <div class="about-feature-icon">&#127919;</div>
                             <div class="about-feature-content">
                                 <h4>Zero Platform OK</h4>
                                 <p>I've launched debuts for authors with just 50 followers to bestseller status</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">💡</div>
+                            <div class="about-feature-icon">&#128161;</div>
                             <div class="about-feature-content">
                                 <h4>Data-Driven</h4>
                                 <p>Real optimization based on performance metrics, not guesswork</p>
                             </div>
                         </div>
                         <div class="about-feature">
-                            <div class="about-feature-icon">🤝</div>
+                            <div class="about-feature-icon">&#129309;</div>
                             <div class="about-feature-content">
                                 <h4>Your True Partner</h4>
                                 <p>I treat your book like it's mine, celebrating every win with you</p>
@@ -3071,9 +2930,7 @@
         </div>
     </section>
 
-    <!-- =============================================
-         SERVICES SECTION - VERY DETAILED
-    ============================================= -->
+    <!-- SERVICES SECTION -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header reveal">
@@ -3082,147 +2939,147 @@
                 <p>I offer tailored marketing solutions designed specifically for serious authors who are ready to invest in their success. Each engagement is customized to your unique book, goals, and timeline.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="services-intro reveal">
-                <p class="services-intro-text">Most book marketers will tell you to "build your platform" or "just run Facebook ads." <strong>That's lazy advice.</strong> Here's what actually works in 2024-2025 — and what I've used to launch 30+ books into Amazon's top 100. Below are the comprehensive services I offer, each designed to maximize your book's success in the marketplace.</p>
+                <p class="services-intro-text">Most book marketers will tell you to "build your platform" or "just run Facebook ads." <strong>That's lazy advice.</strong> Here's what actually works in 2024-2025 &mdash; and what I've used to launch 30+ books into Amazon's top 100. Below are the comprehensive services I offer, each designed to maximize your book's success in the marketplace.</p>
             </div>
-            
+
             <div class="services-grid">
                 <!-- Service 1: Bestseller Launch Blueprint -->
                 <div class="service-item reveal">
                     <div class="service-header">
                         <div class="service-number">01</div>
-                        <div class="service-icon">📋</div>
+                        <div class="service-icon">&#128640;</div>
                         <h3>Bestseller Launch Blueprint</h3>
                         <p class="service-tagline">Done-With-You Strategic Partnership</p>
                         <p class="service-intro">This comprehensive program is designed for authors who want expert strategy and guidance while executing the plan themselves. I'll create your complete launch roadmap, optimize every element for success, and guide you through each step with weekly coaching calls and unlimited email support.</p>
                     </div>
-                    
+
                     <div class="service-details">
                         <h4>What's Included</h4>
                         <div class="service-features-list">
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🎯</div>
+                                <div class="service-feature-icon">&#127919;</div>
                                 <div class="service-feature-content">
                                     <h5>Deep Dive Strategy Session (2 Hours)</h5>
                                     <p>An intensive session where we dissect your book, your market, your competition, and your goals. I'll analyze everything from your genre positioning to your ideal reader profile, identifying the exact strategies that will work for YOUR specific book.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">📅</div>
+                                <div class="service-feature-icon">&#128197;</div>
                                 <div class="service-feature-content">
                                     <h5>Custom 90-Day Launch Roadmap</h5>
-                                    <p>A comprehensive, day-by-day action plan covering everything from pre-launch preparation to post-launch optimization. This isn't a template — it's a fully customized strategy document (40+ pages) tailored specifically to your book, timeline, and resources.</p>
+                                    <p>A comprehensive, day-by-day action plan covering everything from pre-launch preparation to post-launch optimization. This isn't a template &mdash; it's a fully customized strategy document (40+ pages) tailored specifically to your book, timeline, and resources.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🔍</div>
+                                <div class="service-feature-icon">&#128269;</div>
                                 <div class="service-feature-content">
                                     <h5>Complete Amazon Optimization</h5>
                                     <p>I'll research and provide your exact 50 target keywords, identify 8-12 categories (including hidden subcategories most authors don't know exist), write your conversion-optimized book description, create your A+ Content strategy, and optimize your "Look Inside" preview.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">⭐</div>
+                                <div class="service-feature-icon">&#11088;</div>
                                 <div class="service-feature-content">
-                                    <h5>ARC & Review Acquisition Strategy</h5>
+                                    <h5>ARC &amp; Review Acquisition Strategy</h5>
                                     <p>Access to my private ARC reader database (2,000+ vetted readers across all genres), complete outreach templates and timeline, review acquisition strategy, plus a list of 50+ book bloggers and influencers in your specific genre.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">📧</div>
+                                <div class="service-feature-icon">&#9993;</div>
                                 <div class="service-feature-content">
-                                    <h5>Email & Social Media Templates</h5>
+                                    <h5>Email &amp; Social Media Templates</h5>
                                     <p>Complete email sequence templates for your pre-order campaign, launch week, and post-launch follow-up. Plus a 90-day social media content calendar with post ideas, captions, and optimal posting times for your genre.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🤝</div>
+                                <div class="service-feature-icon">&#129309;</div>
                                 <div class="service-feature-content">
                                     <h5>Unlimited Email Support</h5>
-                                    <p>Weekily Email to review progress, troubleshoot challenges, and adjust strategy as needed. Between the chats, you have unlimited email access to me throughout the 12-week engagement.</p>
+                                    <p>Weekly emails to review progress, troubleshoot challenges, and adjust strategy as needed. Between the chats, you have unlimited email access to me throughout the 12-week engagement.</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="service-best-for">
                             <h5>Best For</h5>
-                            <p>Authors who are organized, motivated, and willing to do the execution work themselves — but want an expert guiding every single step. You'll have a clear roadmap and my direct support, but you're in the driver's seat.</p>
+                            <p>Authors who are organized, motivated, and willing to do the execution work themselves &mdash; but want an expert guiding every single step. You'll have a clear roadmap and my direct support, but you're in the driver's seat.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 2: Full Done-For-You Launch -->
                 <div class="service-item reveal">
                     <div class="service-header">
                         <div class="service-number">02</div>
-                        <div class="service-icon">🚀</div>
+                        <div class="service-icon">&#128171;</div>
                         <h3>Full Done-For-You Launch Management</h3>
                         <p class="service-tagline">White-Glove Complete Execution</p>
-                        <p class="service-intro">This is my signature offering for authors who want to focus on writing while I handle absolutely everything else. I personally execute your entire launch campaign — from strategy to implementation to optimization. You approve the plan; I do 100% of the heavy lifting.</p>
+                        <p class="service-intro">This is my signature offering for authors who want to focus on writing while I handle absolutely everything else. I personally execute your entire launch campaign &mdash; from strategy to implementation to optimization. You approve the plan; I do 100% of the heavy lifting.</p>
                     </div>
-                    
+
                     <div class="service-details">
                         <h4>What's Included</h4>
                         <div class="service-features-list">
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">✨</div>
+                                <div class="service-feature-icon">&#10024;</div>
                                 <div class="service-feature-content">
                                     <h5>Everything in the Blueprint Package, Plus...</h5>
-                                    <p>You get all the strategy, research, and planning from the Blueprint — but instead of executing it yourself, I handle everything personally. This is true white-glove service.</p>
+                                    <p>You get all the strategy, research, and planning from the Blueprint &mdash; but instead of executing it yourself, I handle everything personally. This is true white-glove service.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">⚡</div>
+                                <div class="service-feature-icon">&#9889;</div>
                                 <div class="service-feature-content">
                                     <h5>Complete Campaign Execution</h5>
                                     <p>I personally implement your entire Amazon optimization, upload all changes, design and implement your A+ Content, and ensure every technical element is perfect before launch.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">👥</div>
+                                <div class="service-feature-icon">&#128293;</div>
                                 <div class="service-feature-content">
                                     <h5>Full ARC Reader Management</h5>
                                     <p>I source and vet 300-500 ARC readers from my database, manage all ARC distribution (via NetGalley, BookSirens, or direct), coordinate review posting schedule, and follow up with readers to maximize review conversion.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">✍️</div>
+                                <div class="service-feature-icon">&#9999;&#65039;</div>
                                 <div class="service-feature-content">
-                                    <h5>Professional Email Copywriting & Scheduling</h5>
+                                    <h5>Professional Email Copywriting &amp; Scheduling</h5>
                                     <p>I write all your email sequences (10-15 high-converting emails) and schedule them through your email platform. These are the same sequences that have driven 10,000+ book sales for my clients.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🎙️</div>
+                                <div class="service-feature-icon">&#128227;</div>
                                 <div class="service-feature-content">
-                                    <h5>Influencer & Media Outreach</h5>
+                                    <h5>Influencer &amp; Media Outreach</h5>
                                     <p>I pitch podcasts, blogs, and media outlets on your behalf, leveraging my personal relationships with 200+ book influencers, reviewers, and newsletter owners. I'll secure 8-15 interviews and features.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">📊</div>
+                                <div class="service-feature-icon">&#128200;</div>
                                 <div class="service-feature-content">
-                                    <h5>Daily Launch Week Monitoring & Optimization</h5>
+                                    <h5>Daily Launch Week Monitoring &amp; Optimization</h5>
                                     <p>During launch week, I monitor your Amazon ranking HOURLY, adjusting strategy in real-time based on performance. I coordinate all newsletter sends, manage promo site campaigns, and optimize everything for maximum velocity.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">♾️</div>
+                                <div class="service-feature-icon">&#9854;&#65039;</div>
                                 <div class="service-feature-content">
                                     <h5>Post-Launch Evergreen Systems</h5>
                                     <p>After launch, I build automated systems that keep selling your book for years: email funnels, reader magnets, ongoing promo site rotations, and cross-promotion partnerships with other authors in your genre.</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="service-process">
                             <h4>The Process</h4>
                             <div class="service-process-steps">
                                 <div class="process-step-item">
                                     <div class="process-step-number">1</div>
                                     <div class="process-step-content">
-                                        <h5>Strategy & Planning (Weeks 1-2)</h5>
+                                        <h5>Strategy &amp; Planning (Weeks 1-2)</h5>
                                         <p>Deep dive into your book, market research, competitive analysis, and complete launch strategy development.</p>
                                     </div>
                                 </div>
@@ -3249,71 +3106,71 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="service-best-for">
                             <h5>Best For</h5>
                             <p>Authors who want to focus on writing their next book while I handle 100% of the marketing execution. You'll approve strategy and content, but I do all the work. Limited to 8 authors per quarter to ensure premium attention.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 3: Evergreen Marketing System -->
                 <div class="service-item reveal">
                     <div class="service-header">
                         <div class="service-number">03</div>
-                        <div class="service-icon">♻️</div>
+                        <div class="service-icon">&#9851;&#65039;</div>
                         <h3>Evergreen Book Marketing System</h3>
                         <p class="service-tagline">Post-Launch Revenue Optimization</p>
-                        <p class="service-intro">Did your book already launch? Whether it was 6 months ago or 3 years ago, it's never too late to turn it into a consistent revenue generator. This program is specifically designed for post-launch optimization and backlist revival — some of my biggest success stories came from "reviving" books everyone had given up on.</p>
+                        <p class="service-intro">Did your book already launch? Whether it was 6 months ago or 3 years ago, it's never too late to turn it into a consistent revenue generator. This program is specifically designed for post-launch optimization and backlist revival &mdash; some of my biggest success stories came from "reviving" books everyone had given up on.</p>
                     </div>
-                    
+
                     <div class="service-details">
                         <h4>What's Included</h4>
                         <div class="service-features-list">
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🔬</div>
+                                <div class="service-feature-icon">&#128300;</div>
                                 <div class="service-feature-content">
                                     <h5>Comprehensive Performance Audit</h5>
                                     <p>Deep dive into your current Amazon page, sales data, review patterns, and competitive positioning. I'll identify exactly why your book isn't selling as well as it should and create a strategic plan to fix it.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🔄</div>
+                                <div class="service-feature-icon">&#128270;</div>
                                 <div class="service-feature-content">
                                     <h5>Complete Amazon Re-Optimization</h5>
                                     <p>Rewritten book description with conversion psychology, recategorization into new/better categories (I often find 5-10 additional categories authors didn't know existed), refreshed keywords, and updated A+ Content.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">⭐</div>
+                                <div class="service-feature-icon">&#11088;</div>
                                 <div class="service-feature-content">
                                     <h5>Review Acquisition Campaign</h5>
                                     <p>Even if your book has been out for years, we can generate 100-300 new reviews through strategic ARC outreach, book blogger partnerships, and reader engagement campaigns.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">🎁</div>
+                                <div class="service-feature-icon">&#129522;</div>
                                 <div class="service-feature-content">
-                                    <h5>Reader Magnet & Funnel Creation</h5>
+                                    <h5>Reader Magnet &amp; Funnel Creation</h5>
                                     <p>I'll create compelling bonus content (reader magnets) that builds your email list while you sleep. Then we'll build automated email sequences that turn new subscribers into book buyers.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">📈</div>
+                                <div class="service-feature-icon">&#128197;</div>
                                 <div class="service-feature-content">
                                     <h5>Ongoing Promotion Calendar</h5>
                                     <p>Monthly promo site rotation (BookBub, Fussy Librarian, Written Word Media, etc.), newsletter partnership calendar, and perma-free or $0.99 funnel setup for series authors.</p>
                                 </div>
                             </div>
                             <div class="service-feature-item">
-                                <div class="service-feature-icon">📊</div>
+                                <div class="service-feature-icon">&#128200;</div>
                                 <div class="service-feature-content">
-                                    <h5>Monthly Performance Reports & Optimization</h5>
+                                    <h5>Monthly Performance Reports &amp; Optimization</h5>
                                     <p>Detailed analytics tracking, ongoing strategy adjustments based on data, and regular optimization to ensure sustained growth month after month.</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="service-best-for">
                             <h5>Best For</h5>
                             <p>Authors whose book has already launched (whether recently or years ago) and who want to turn it into a consistent revenue generator. Also perfect for series authors looking to optimize their backlist and create reader funnels. Timeline: 8-12 weeks.</p>
@@ -3324,9 +3181,7 @@
         </div>
     </section>
 
-    <!-- =============================================
-         APPROACH SECTION
-    ============================================= -->
+    <!-- APPROACH SECTION -->
     <section class="approach">
         <div class="container">
             <div class="section-header reveal">
@@ -3335,104 +3190,102 @@
                 <p>No smoke and mirrors. No magic bullets. Just a proven, systematic approach that's generated millions in author revenue across 30+ successful campaigns.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="approach-grid">
                 <div class="approach-step reveal delay-1">
                     <div class="approach-step-number">01</div>
                     <h3>Deep Market Research</h3>
-                    <p>Before we touch a single marketing channel, I study your competition, your ideal reader, and your unique positioning. Most authors skip this step — it's why they fail.</p>
+                    <p>Before we touch a single marketing channel, I study your competition, your ideal reader, and your unique positioning. Most authors skip this step &mdash; it's why they fail.</p>
                 </div>
                 <div class="approach-step reveal delay-2">
                     <div class="approach-step-number">02</div>
                     <h3>Amazon Optimization</h3>
-                    <p>Your Amazon page is your #1 sales tool. Keywords, categories, descriptions, A+ content — everything optimized to convert browsers into buyers.</p>
+                    <p>Your Amazon page is your #1 sales tool. Keywords, categories, descriptions, A+ content &mdash; everything optimized to convert browsers into buyers.</p>
                 </div>
                 <div class="approach-step reveal delay-3">
                     <div class="approach-step-number">03</div>
                     <h3>Pre-Launch Buzz Engine</h3>
-                    <p>We don't launch cold. ARC readers, email lists, influencer partnerships, media outreach — by launch day, you have an army ready to buy.</p>
+                    <p>We don't launch cold. ARC readers, email lists, influencer partnerships, media outreach &mdash; by launch day, you have an army ready to buy.</p>
                 </div>
             </div>
-            
+
             <div class="approach-details">
                 <div class="approach-detail-card reveal delay-1">
-                    <div class="approach-detail-icon">🎯</div>
+                    <div class="approach-detail-icon">&#127919;</div>
                     <h4>Launch Week Execution</h4>
                     <p>Launch week is a coordinated blitz, not a "post and pray" situation. I monitor rankings hourly, coordinate newsletter sends, manage promo campaigns, and adjust strategy in real-time.</p>
                     <ul class="approach-detail-list">
-                        <li><span>→</span> Day 1: Pre-order release + ARC reader activation</li>
-                        <li><span>→</span> Day 2-3: Email sequences + partner newsletters</li>
-                        <li><span>→</span> Day 4-5: Social proof amplification</li>
-                        <li><span>→</span> Day 6-7: Final push to hit/maintain bestseller status</li>
+                        <li><span>&#10003;</span> Day 1: Pre-order release + ARC reader activation</li>
+                        <li><span>&#10003;</span> Day 2-3: Email sequences + partner newsletters</li>
+                        <li><span>&#10003;</span> Day 4-5: Social proof amplification</li>
+                        <li><span>&#10003;</span> Day 6-7: Final push to hit/maintain bestseller status</li>
                     </ul>
                 </div>
                 <div class="approach-detail-card reveal delay-2">
-                    <div class="approach-detail-icon">📊</div>
+                    <div class="approach-detail-icon">&#128200;</div>
                     <h4>Data-Driven Optimization</h4>
-                    <p>I track everything and optimize based on real performance data — not guesses. This is the difference between authors who hit #1 and authors who "hope" for results.</p>
+                    <p>I track everything and optimize based on real performance data &mdash; not guesses. This is the difference between authors who hit #1 and authors who "hope" for results.</p>
                     <ul class="approach-detail-list">
-                        <li><span>→</span> Sales velocity tracking (daily, weekly, monthly)</li>
-                        <li><span>→</span> Conversion rate optimization</li>
-                        <li><span>→</span> Review acquisition monitoring</li>
-                        <li><span>→</span> Amazon ranking pattern analysis</li>
+                        <li><span>&#10003;</span> Sales velocity tracking (daily, weekly, monthly)</li>
+                        <li><span>&#10003;</span> Conversion rate optimization</li>
+                        <li><span>&#10003;</span> Review acquisition monitoring</li>
+                        <li><span>&#10003;</span> Amazon ranking pattern analysis</li>
                     </ul>
                 </div>
                 <div class="approach-detail-card reveal delay-3">
-                    <div class="approach-detail-icon">♾️</div>
+                    <div class="approach-detail-icon">&#9851;&#65039;</div>
                     <h4>Post-Launch Evergreen Systems</h4>
-                    <p>Most marketers disappear after launch week. I don't. We build systems that keep selling your book for YEARS — automated funnels, ongoing promos, and reader magnet strategies.</p>
+                    <p>Most marketers disappear after launch week. I don't. We build systems that keep selling your book for YEARS &mdash; automated funnels, ongoing promos, and reader magnet strategies.</p>
                     <ul class="approach-detail-list">
-                        <li><span>→</span> Automated email sequences for new readers</li>
-                        <li><span>→</span> Perma-free/$.99 funnel strategies</li>
-                        <li><span>→</span> Cross-promotion partnerships</li>
-                        <li><span>→</span> Monthly promo site rotations</li>
+                        <li><span>&#10003;</span> Automated email sequences for new readers</li>
+                        <li><span>&#10003;</span> Perma-free/$.99 funnel strategies</li>
+                        <li><span>&#10003;</span> Cross-promotion partnerships</li>
+                        <li><span>&#10003;</span> Monthly promo site rotations</li>
                     </ul>
                 </div>
                 <div class="approach-detail-card reveal delay-4">
-                    <div class="approach-detail-icon">🤝</div>
+                    <div class="approach-detail-icon">&#129309;</div>
                     <h4>Industry Relationships</h4>
                     <p>I'm not cold-emailing book bloggers. I have personal relationships with 200+ influencers, reviewers, newsletter owners, and media contacts who trust my recommendations.</p>
                     <ul class="approach-detail-list">
-                        <li><span>→</span> 200+ book blogger relationships</li>
-                        <li><span>→</span> 40+ newsletter partnerships</li>
-                        <li><span>→</span> BookTok and Bookstagram connections</li>
-                        <li><span>→</span> Podcast and media contacts</li>
+                        <li><span>&#10003;</span> 200+ book blogger relationships</li>
+                        <li><span>&#10003;</span> 40+ newsletter partnerships</li>
+                        <li><span>&#10003;</span> BookTok and Bookstagram connections</li>
+                        <li><span>&#10003;</span> Podcast and media contacts</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =============================================
-         RESULTS SECTION
-    ============================================= -->
+    <!-- RESULTS SECTION -->
     <section class="results">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">Results</span>
                 <h2>What Actually Happens When You <span>Work With Me</span></h2>
-                <p>Real numbers from real campaigns. No fluff, no inflated claims — just documented results from authors who trusted me with their books.</p>
+                <p>Real numbers from real campaigns. No fluff, no inflated claims &mdash; just documented results from authors who trusted me with their books.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="results-stats-grid">
                 <div class="result-stat-card reveal delay-1">
-                    <span class="result-stat-number">30+</span>
+                    <span class="result-stat-number" data-target="30" data-suffix="+">30+</span>
                     <h4>Amazon #1 Bestsellers</h4>
                     <p>Across multiple categories and genres, from debut authors to established names</p>
                 </div>
                 <div class="result-stat-card reveal delay-2">
-                    <span class="result-stat-number">500K+</span>
+                    <span class="result-stat-number" data-target="500000" data-suffix="+" data-display="500K+">500K+</span>
                     <h4>Books Sold</h4>
                     <p>Combined sales across all client campaigns since 2021</p>
                 </div>
                 <div class="result-stat-card reveal delay-3">
-                    <span class="result-stat-number">$2M+</span>
+                    <span class="result-stat-number" data-target="2000000" data-prefix="$" data-suffix="+" data-display="$2M+">$2M+</span>
                     <h4>Author Revenue</h4>
                     <p>Generated for clients in royalties, speaking gigs, and rights deals</p>
                 </div>
                 <div class="result-stat-card reveal delay-4">
-                    <span class="result-stat-number">12</span>
+                    <span class="result-stat-number" data-target="12" data-suffix="">12</span>
                     <h4>USA Today Lists</h4>
                     <p>Authors who hit major national bestseller lists under my guidance</p>
                 </div>
@@ -3440,49 +3293,47 @@
         </div>
     </section>
 
-    <!-- =============================================
-         TESTIMONIALS SECTION
-    ============================================= -->
+    <!-- TESTIMONIALS SECTION -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">Success Stories</span>
                 <h2>What Authors Say After <span>Working With Me</span></h2>
-                <p>Real testimonials from real authors. Feel free to reach out to them directly — their emails are included because they're happy to share their experience.</p>
+                <p>Real testimonials from real authors. Feel free to reach out to them directly &mdash; their emails are included because they're happy to share their experience.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="testimonials-grid">
                 <!-- Testimonial 1: Dobi Daniels -->
                 <div class="testimonial-card reveal delay-1">
                     <div class="testimonial-header">
                         <div class="testimonial-author-photo">
-                            <img src="DOBI PICTURE.webp" alt="Dobi Daniels">
+                            <img src="DOBI PICTURE.webp" alt="Dobi Daniels - Romance Author" loading="lazy">
                         </div>
                         <div class="testimonial-book-cover">
-                            <img src="DOBI BOOK.jpg" alt="Book by Dobi Daniels">
+                            <img src="DOBI BOOK.jpg" alt="Bestselling romance novel by Dobi Daniels" loading="lazy">
                         </div>
                         <div class="testimonial-author-info">
                             <h4>Dobi Daniels</h4>
                             <p class="genre">Romance Author</p>
-                            <a href="mailto:dobidanielsromance@gmail.com" class="email">
-                                <span>📧</span> dobidanielsromance@gmail.com
+                            <a href="mailto:dobidanielsromance@gmail.com" class="email" aria-label="Email Dobi Daniels">
+                                <span>&#128231;</span> dobidanielsromance@gmail.com
                             </a>
                         </div>
                     </div>
                     <div class="testimonial-content">
-                        <span class="testimonial-quote-icon">"</span>
-                        <p class="testimonial-text">Working with Chloe was the best decision I made for my author career. She didn't just give me a plan — she was WITH me every single step of the way. When my book hit #1 in Romance within 48 hours of launch, I honestly cried. She made the overwhelming feel completely manageable, and her expertise is unmatched in this industry.</p>
+                        <span class="testimonial-quote-icon">&ldquo;</span>
+                        <p class="testimonial-text">Working with Chloe was the best decision I made for my author career. She didn't just give me a plan &mdash; she was WITH me every single step of the way. When my book hit #1 in Romance within 48 hours of launch, I honestly cried. She made the overwhelming feel completely manageable, and her expertise is unmatched in this industry.</p>
                         <div class="testimonial-results">
                             <h5>Results Achieved</h5>
                             <ul>
-                                <li><span>✓</span> #1 Amazon Bestseller in Romance</li>
-                                <li><span>✓</span> 15,000+ copies sold first month</li>
-                                <li><span>✓</span> Featured on BookBub</li>
-                                <li><span>✓</span> 400+ reviews in 30 days</li>
+                                <li><span>&#10003;</span> #1 Amazon Bestseller in Romance</li>
+                                <li><span>&#10003;</span> 15,000+ copies sold first month</li>
+                                <li><span>&#10003;</span> Featured on BookBub</li>
+                                <li><span>&#10003;</span> 400+ reviews in 30 days</li>
                             </ul>
                         </div>
-                        <a href="https://a.co/d/04Hg6XzY" target="_blank" class="testimonial-amazon-btn">
+                        <a href="https://a.co/d/04Hg6XzY" target="_blank" rel="noopener noreferrer" class="testimonial-amazon-btn">
                             <span>View Book on Amazon</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
@@ -3490,37 +3341,37 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Testimonial 2: Kate Cullen -->
                 <div class="testimonial-card reveal delay-2">
                     <div class="testimonial-header">
                         <div class="testimonial-author-photo">
-                            <img src="KATE PICTURE.webp" alt="Kate Cullen">
+                            <img src="KATE PICTURE.webp" alt="Kate Cullen - Fiction Author" loading="lazy">
                         </div>
                         <div class="testimonial-book-cover">
-                            <img src="KATE BOOK.jpg" alt="Book by Kate Cullen">
+                            <img src="KATE BOOK.jpg" alt="Bestselling fiction novel by Kate Cullen" loading="lazy">
                         </div>
                         <div class="testimonial-author-info">
                             <h4>Kate Cullen</h4>
                             <p class="genre">Fiction Author</p>
-                            <a href="mailto:katecullen93@gmail.com" class="email">
-                                <span>📧</span> katecullen93@gmail.com
+                            <a href="mailto:katecullen93@gmail.com" class="email" aria-label="Email Kate Cullen">
+                                <span>&#128231;</span> katecullen93@gmail.com
                             </a>
                         </div>
                     </div>
                     <div class="testimonial-content">
-                        <span class="testimonial-quote-icon">"</span>
+                        <span class="testimonial-quote-icon">&ldquo;</span>
                         <p class="testimonial-text">I had no platform, no email list, and honestly no clue what I was doing. Chloe walked me through EVERYTHING with patience and expertise I didn't expect. She made the overwhelming feel manageable. My debut novel became an Amazon bestseller, and I've never looked back. If you're on the fence, just do it.</p>
                         <div class="testimonial-results">
                             <h5>Results Achieved</h5>
                             <ul>
-                                <li><span>✓</span> #1 in Multiple Categories</li>
-                                <li><span>✓</span> 12,000+ copies sold first month</li>
-                                <li><span>✓</span> Foreign rights sold to 3 countries</li>
-                                <li><span>✓</span> Audiobook deal secured</li>
+                                <li><span>&#10003;</span> #1 in Multiple Categories</li>
+                                <li><span>&#10003;</span> 12,000+ copies sold first month</li>
+                                <li><span>&#10003;</span> Foreign rights sold to 3 countries</li>
+                                <li><span>&#10003;</span> Audiobook deal secured</li>
                             </ul>
                         </div>
-                        <a href="https://a.co/d/0hrN0rBi" target="_blank" class="testimonial-amazon-btn">
+                        <a href="https://a.co/d/0hrN0rBi" target="_blank" rel="noopener noreferrer" class="testimonial-amazon-btn">
                             <span>View Book on Amazon</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
@@ -3528,37 +3379,37 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Testimonial 3: Sian O'Gorman -->
                 <div class="testimonial-card reveal delay-3">
                     <div class="testimonial-header">
                         <div class="testimonial-author-photo">
-                            <img src="SIAN PICTURE.webp" alt="Sian O'Gorman">
+                            <img src="SIAN PICTURE.webp" alt="Sian O'Gorman - Women's Fiction Author" loading="lazy">
                         </div>
                         <div class="testimonial-book-cover">
-                            <img src="SIAN BOOK.jpg" alt="Book by Sian O'Gorman">
+                            <img src="SIAN BOOK.jpg" alt="Bestselling women's fiction novel by Sian O'Gorman" loading="lazy">
                         </div>
                         <div class="testimonial-author-info">
                             <h4>Sian O'Gorman</h4>
                             <p class="genre">Women's Fiction Author</p>
-                            <a href="mailto:hellosianogorman001@gmail.com" class="email">
-                                <span>📧</span> hellosianogorman001@gmail.com
+                            <a href="mailto:hellosianogorman001@gmail.com" class="email" aria-label="Email Sian O'Gorman">
+                                <span>&#128231;</span> hellosianogorman001@gmail.com
                             </a>
                         </div>
                     </div>
                     <div class="testimonial-content">
-                        <span class="testimonial-quote-icon">"</span>
-                        <p class="testimonial-text">Chloe is worth every single penny — and then some. She's not just a marketer; she's a true partner who celebrates your wins at 2am and works tirelessly to get you there. My book climbed to the top of the charts and stayed there for weeks. I genuinely don't know where my career would be without her.</p>
+                        <span class="testimonial-quote-icon">&ldquo;</span>
+                        <p class="testimonial-text">Chloe is worth every single penny &mdash; and then some. She's not just a marketer; she's a true partner who celebrates your wins at 2am and works tirelessly to get you there. My book climbed to the top of the charts and stayed there for weeks. I genuinely don't know where my career would be without her.</p>
                         <div class="testimonial-results">
                             <h5>Results Achieved</h5>
                             <ul>
-                                <li><span>✓</span> #1 in Women's Fiction</li>
-                                <li><span>✓</span> 18,000+ copies sold in 60 days</li>
-                                <li><span>✓</span> Featured in major book publications</li>
-                                <li><span>✓</span> Hit Apple Books Top 10</li>
+                                <li><span>&#10003;</span> #1 in Women's Fiction</li>
+                                <li><span>&#10003;</span> 18,000+ copies sold in 60 days</li>
+                                <li><span>&#10003;</span> Featured in major book publications</li>
+                                <li><span>&#10003;</span> Hit Apple Books Top 10</li>
                             </ul>
                         </div>
-                        <a href="https://a.co/d/08rd7Vn2" target="_blank" class="testimonial-amazon-btn">
+                        <a href="https://a.co/d/08rd7Vn2" target="_blank" rel="noopener noreferrer" class="testimonial-amazon-btn">
                             <span>View Book on Amazon</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
@@ -3570,9 +3421,7 @@
         </div>
     </section>
 
-    <!-- =============================================
-         WHAT MAKES ME DIFFERENT
-    ============================================= -->
+    <!-- WHAT MAKES ME DIFFERENT -->
     <section class="difference">
         <div class="container">
             <div class="section-header reveal">
@@ -3581,35 +3430,35 @@
                 <p>Most book marketers are either social media "gurus" who've never launched a book, agencies that treat you like a number, or cheap freelancers with copy-paste plans. I'm none of those.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="difference-grid">
                 <div class="difference-card reveal delay-1">
-                    <div class="difference-icon">🎯</div>
+                    <div class="difference-icon">&#127919;</div>
                     <h3>Proven Track Record</h3>
-                    <p>I've actually done this 30+ times. I'm not selling theory — I'm selling a proven system that's generated millions in author revenue. Every strategy I recommend has been tested with real campaigns and real results.</p>
+                    <p>I've actually done this 30+ times. I'm not selling theory &mdash; I'm selling a proven system that's generated millions in author revenue. Every strategy I recommend has been tested with real campaigns and real results.</p>
                 </div>
                 <div class="difference-card reveal delay-2">
-                    <div class="difference-icon">❤️</div>
+                    <div class="difference-icon">&#10084;&#65039;</div>
                     <h3>Your Book = My Reputation</h3>
                     <p>I treat your book like it's mine. I obsess over your rankings, celebrate your wins at 2am, and lose sleep when something isn't working. Your success is literally my reputation in this industry.</p>
                 </div>
                 <div class="difference-card reveal delay-3">
-                    <div class="difference-icon">🤝</div>
+                    <div class="difference-icon">&#129309;</div>
                     <h3>Real Industry Relationships</h3>
                     <p>I'm not cold-emailing book bloggers. I have personal relationships with 200+ influencers, reviewers, newsletter owners, and media contacts who trust my recommendations implicitly.</p>
                 </div>
                 <div class="difference-card reveal delay-4">
-                    <div class="difference-icon">📖</div>
+                    <div class="difference-icon">&#128218;</div>
                     <h3>Genre Fluent</h3>
                     <p>I've launched bestsellers in thriller, romance, sci-fi, fantasy, memoir, self-help, business, and more. I know what works in YOUR specific market because I've done it before.</p>
                 </div>
                 <div class="difference-card reveal delay-5">
-                    <div class="difference-icon">⚡</div>
+                    <div class="difference-icon">&#9889;</div>
                     <h3>Cutting-Edge Strategies</h3>
                     <p>Amazon's algorithm changes constantly. What worked in 2022 doesn't work in 2024. I test new strategies every single month. You get the cutting-edge stuff, not outdated tactics everyone else is using.</p>
                 </div>
                 <div class="difference-card reveal delay-6">
-                    <div class="difference-icon">💎</div>
+                    <div class="difference-icon">&#128269;</div>
                     <h3>Complete Transparency</h3>
                     <p>I won't promise you'll hit the New York Times list if your book isn't positioned for it. But I WILL tell you exactly what's realistic and then build the plan to get there. No BS, ever.</p>
                 </div>
@@ -3617,107 +3466,103 @@
         </div>
     </section>
 
-    <!-- =============================================
-         FAQ SECTION
-    ============================================= -->
+    <!-- FAQ SECTION -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">FAQ</span>
                 <h2>Questions Authors <span>Always Ask Me</span></h2>
-                <p>Answered honestly — because transparency matters more than sales pitches.</p>
+                <p>Answered honestly &mdash; because transparency matters more than sales pitches.</p>
                 <div class="section-divider"></div>
             </div>
-            
+
             <div class="faq-container">
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>Do I need a big platform or email list to work with you?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
                             <p><strong>Absolutely not.</strong> Some of my biggest success stories came from debut authors with zero email list, under 100 social media followers, no industry connections, and no previous publishing credits.</p>
                             <p>What you DO need:</p>
                             <ul>
-                                <li><span>✓</span> A professionally edited book</li>
-                                <li><span>✓</span> A professional cover that matches genre expectations</li>
-                                <li><span>✓</span> A willingness to invest in marketing</li>
-                                <li><span>✓</span> The discipline to follow a proven system</li>
+                                <li><span>&#10003;</span> A professionally edited book</li>
+                                <li><span>&#10003;</span> A professional cover that matches genre expectations</li>
+                                <li><span>&#10003;</span> A willingness to invest in marketing</li>
+                                <li><span>&#10003;</span> The discipline to follow a proven system</li>
                             </ul>
                             <p>Platform is helpful, but it's not required. I'll help you build one as we go.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>Will you guarantee I hit the bestseller list?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
-                            <p><strong>No — and you should run from anyone who does.</strong> There are too many variables outside our control (algorithm changes, competitor releases, etc.).</p>
+                            <p><strong>No &mdash; and you should run from anyone who does.</strong> There are too many variables outside our control (algorithm changes, competitor releases, etc.).</p>
                             <p>What I CAN guarantee:</p>
                             <ul>
-                                <li><span>✓</span> You'll have the exact same system my 30+ bestselling clients used</li>
-                                <li><span>✓</span> I'll work as hard on your book as I do on my own projects</li>
-                                <li><span>✓</span> You'll have a clear, proven plan — not guesswork</li>
-                                <li><span>✓</span> If something isn't working, I'll pivot immediately</li>
+                                <li><span>&#10003;</span> You'll have the exact same system my 30+ bestselling clients used</li>
+                                <li><span>&#10003;</span> I'll work as hard on your book as I do on my own projects</li>
+                                <li><span>&#10003;</span> You'll have a clear, proven plan &mdash; not guesswork</li>
+                                <li><span>&#10003;</span> If something isn't working, I'll pivot immediately</li>
                             </ul>
-                            <p>That honesty is why my clients trust me — and why I have a 100% client satisfaction record.</p>
+                            <p>That honesty is why my clients trust me &mdash; and why I have a 100% client satisfaction record.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>I'm traditionally published. Can you still help?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
-                            <p><strong>Yes — and I LOVE working with trad authors.</strong> Most publishers only actively market your book for 4-6 weeks (if that). After that, you're on your own.</p>
-                            <p>I've worked with authors published by Penguin Random House, HarperCollins, Simon & Schuster, Hachette, and many mid-size presses. My approach with trad authors:</p>
+                            <p><strong>Yes &mdash; and I LOVE working with trad authors.</strong> Most publishers only actively market your book for 4-6 weeks (if that). After that, you're on your own.</p>
+                            <p>I've worked with authors published by Penguin Random House, HarperCollins, Simon &amp; Schuster, Hachette, and many mid-size presses. My approach with trad authors:</p>
                             <ul>
-                                <li><span>→</span> I don't duplicate what your publisher is already doing</li>
-                                <li><span>→</span> I focus on channels and strategies your publisher isn't leveraging</li>
-                                <li><span>→</span> I coordinate WITH your publisher (not against them)</li>
-                                <li><span>→</span> I build evergreen systems that keep selling long after your publisher has moved on</li>
+                                <li><span>&#10003;</span> I don't duplicate what your publisher is already doing</li>
+                                <li><span>&#10003;</span> I focus on channels and strategies your publisher isn't leveraging</li>
+                                <li><span>&#10003;</span> I coordinate WITH your publisher (not against them)</li>
+                                <li><span>&#10003;</span> I build evergreen systems that keep selling long after your publisher has moved on</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>What if my book has already launched?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
-                            <p><strong>Even better.</strong> Seriously. Some of my favorite projects are "book revivals" — taking a book that launched 6 months or 2 years ago and turning it into a bestseller.</p>
+                            <p><strong>Even better.</strong> Seriously. Some of my favorite projects are "book revivals" &mdash; taking a book that launched 6 months or 2 years ago and turning it into a bestseller.</p>
                             <p>Why post-launch campaigns work:</p>
                             <ul>
-                                <li><span>✓</span> You already have reviews (social proof)</li>
-                                <li><span>✓</span> You've learned what didn't work (we fix it)</li>
-                                <li><span>✓</span> You have sales data (we optimize based on it)</li>
-                                <li><span>✓</span> There's less pressure than a "one shot" launch</li>
+                                <li><span>&#10003;</span> You already have reviews (social proof)</li>
+                                <li><span>&#10003;</span> You've learned what didn't work (we fix it)</li>
+                                <li><span>&#10003;</span> You have sales data (we optimize based on it)</li>
+                                <li><span>&#10003;</span> There's less pressure than a "one shot" launch</li>
                             </ul>
                             <p>I've taken books that sold 300 copies in their first month and turned them into 15,000+ sales in the re-launch month. <strong>It's never too late.</strong></p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>What genres do you work with?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer-
 
-                        content">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <h3>What genres do you work with?</h3>
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <div class="faq-answer-content">
                             <p>I've launched bestsellers across a wide range of genres:</p>
                             <p><strong>Fiction:</strong> Thriller / Psychological Thriller, Romance (contemporary, historical, paranormal, romantic suspense), Fantasy (epic, urban, romantasy), Science Fiction, Mystery / Crime, Women's Fiction, Historical Fiction, Literary Fiction, Dystopian, Horror</p>
                             <p><strong>Nonfiction:</strong> Self-Help / Personal Development, Business / Leadership, Memoir, Parenting, Health / Wellness, Psychology, Biography, True Crime, Spirituality</p>
@@ -3726,95 +3571,95 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>How long does it take to see results?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
-                            <p><strong>If we're doing a launch campaign:</strong> You'll see results on launch day. Rankings, sales, reviews — it all happens in the first 7 days. The goal is to hit your targets during launch week while building momentum for sustained success.</p>
+                            <p><strong>If we're doing a launch campaign:</strong> You'll see results on launch day. Rankings, sales, reviews &mdash; it all happens in the first 7 days. The goal is to hit your targets during launch week while building momentum for sustained success.</p>
                             <p><strong>If we're doing a post-launch revival or evergreen system:</strong> You'll see initial movement in 2-3 weeks (new reviews, improved rankings), and significant sales increases within 30-45 days.</p>
                             <p><strong>Long-term:</strong> My goal is to build systems that keep selling your book for years. Authors I worked with in 2021 are still seeing 1,000-5,000 sales per month in 2024. That's the power of evergreen marketing systems.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>How many clients do you take on?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
                             <p><strong>Maximum 8 per quarter.</strong> Here's why: I can't give you white-glove, obsessive service if I'm juggling 30 clients.</p>
                             <p>When I'm working on your campaign:</p>
                             <ul>
-                                <li><span>→</span> I'm monitoring your rankings multiple times per day</li>
-                                <li><span>→</span> I'm personally coordinating with newsletter partners, bloggers, podcasters</li>
-                                <li><span>→</span> I'm writing your emails, pitches, and social content (if you're done-for-you)</li>
-                                <li><span>→</span> I'm available via email daily</li>
+                                <li><span>&#10003;</span> I'm monitoring your rankings multiple times per day</li>
+                                <li><span>&#10003;</span> I'm personally coordinating with newsletter partners, bloggers, podcasters</li>
+                                <li><span>&#10003;</span> I'm writing your emails, pitches, and social content (if you're done-for-you)</li>
+                                <li><span>&#10003;</span> I'm available via email daily</li>
                             </ul>
                             <p>I can't do that for 30 authors at once. <strong>What this means for you:</strong> If you're reading this and you want to work together, don't wait. I regularly have a 4-8 week waitlist.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>Do you work with authors outside the US?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
                             <p><strong>Yes!</strong> I've worked with authors in the UK, Canada, Australia, Germany, France, India, South Africa, Ireland, and many other countries.</p>
-                            <p><strong>The only requirement:</strong> Your book must be available on Amazon (any marketplace — .com, .co.uk, .ca, .com.au, etc.).</p>
-                            <p>All communication happens via email. Time zones have never been an issue — I'm flexible and responsive regardless of where you're located.</p>
+                            <p><strong>The only requirement:</strong> Your book must be available on Amazon (any marketplace &mdash; .com, .co.uk, .ca, .com.au, etc.).</p>
+                            <p>All communication happens via email. Time zones have never been an issue &mdash; I'm flexible and responsive regardless of where you're located.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>What if I have multiple books or a series?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
                             <p><strong>Even better.</strong> Series authors are some of my favorite clients because we can create powerful reader funnels.</p>
                             <p>If you have a series or multiple books, we can:</p>
                             <ul>
-                                <li><span>✓</span> Use Book 1 as a funnel (perma-free or $0.99) to hook new readers</li>
-                                <li><span>✓</span> Launch your newest book while simultaneously reviving your backlist</li>
-                                <li><span>✓</span> Build email funnels that upsell readers through your entire catalog</li>
-                                <li><span>✓</span> Create "binge-worthy" launch campaigns that encourage readers to buy all books at once</li>
+                                <li><span>&#10003;</span> Use Book 1 as a funnel (perma-free or $0.99) to hook new readers</li>
+                                <li><span>&#10003;</span> Launch your newest book while simultaneously reviving your backlist</li>
+                                <li><span>&#10003;</span> Build email funnels that upsell readers through your entire catalog</li>
+                                <li><span>&#10003;</span> Create "binge-worthy" launch campaigns that encourage readers to buy all books at once</li>
                             </ul>
                             <p>One of my clients launched Book 5 of her series, and Books 1-4 sold an additional 31,000 copies in the same month. That's the power of strategic series marketing.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item reveal">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false">
                         <h3>How do I know if my book is "ready" to work with you?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
+                        <div class="faq-toggle" aria-hidden="true">+</div>
+                    </button>
+                    <div class="faq-answer" role="region">
                         <div class="faq-answer-content">
                             <p><strong>Your book is ready if:</strong></p>
                             <ul>
-                                <li><span>✓</span> It's professionally edited (developmental edit, line edit, proofread — no typos, no plot holes)</li>
-                                <li><span>✓</span> It has a professional cover designed by someone who understands genre conventions</li>
-                                <li><span>✓</span> It's properly formatted for ebook and/or print</li>
-                                <li><span>✓</span> You have a clear target audience in mind</li>
-                                <li><span>✓</span> You're ready to invest in marketing as a serious business expense</li>
+                                <li><span>&#10003;</span> It's professionally edited (developmental edit, line edit, proofread &mdash; no typos, no plot holes)</li>
+                                <li><span>&#10003;</span> It has a professional cover designed by someone who understands genre conventions</li>
+                                <li><span>&#10003;</span> It's properly formatted for ebook and/or print</li>
+                                <li><span>&#10003;</span> You have a clear target audience in mind</li>
+                                <li><span>&#10003;</span> You're ready to invest in marketing as a serious business expense</li>
                             </ul>
                             <p><strong>Your book is NOT ready if:</strong></p>
                             <ul>
-                                <li><span>✗</span> It's still in draft form or hasn't been professionally edited</li>
-                                <li><span>✗</span> Your cover looks homemade or doesn't match genre expectations</li>
-                                <li><span>✗</span> You're not willing to take feedback on positioning/marketing angles</li>
+                                <li><span>&#10007;</span> It's still in draft form or hasn't been professionally edited</li>
+                                <li><span>&#10007;</span> Your cover looks homemade or doesn't match genre expectations</li>
+                                <li><span>&#10007;</span> You're not willing to take feedback on positioning/marketing angles</li>
                             </ul>
                             <p>Not sure? Reach out anyway. I'll be honest about whether you're ready or what you need to do first.</p>
                         </div>
@@ -3824,66 +3669,64 @@
         </div>
     </section>
 
-    <!-- =============================================
-         CONTACT SECTION
-    ============================================= -->
+    <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-content reveal-left">
                     <span class="section-badge">Get In Touch</span>
                     <h2>Ready to Turn Your Book Into a <span>Bestseller?</span></h2>
-                    <p>Tell me about your book, your goals, and your timeline. I'll respond within 24 hours with my initial thoughts, which service I'd recommend for your specific situation, and next steps if you want to move forward. No pressure, no hard sell — just honest, expert advice.</p>
-                    
+                    <p>Tell me about your book, your goals, and your timeline. I'll respond within 24 hours with my initial thoughts, which service I'd recommend for your specific situation, and next steps if you want to move forward. No pressure, no hard sell &mdash; just honest, expert advice.</p>
+
                     <div class="contact-info-list">
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">📧</div>
+                            <div class="contact-info-icon">&#128231;</div>
                             <div class="contact-info-text">
                                 <h4>Email Me Directly</h4>
                                 <a href="mailto:chloevictoriareynolds@gmail.com">chloevictoriareynolds@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">⏱️</div>
+                            <div class="contact-info-icon">&#9201;&#65039;</div>
                             <div class="contact-info-text">
                                 <h4>Response Time</h4>
                                 <p>Within 24 Hours (Usually Faster)</p>
                             </div>
                         </div>
                         <div class="contact-info-item">
-                            <div class="contact-info-icon">🌍</div>
+                            <div class="contact-info-icon">&#127758;</div>
                             <div class="contact-info-text">
                                 <h4>I Work With</h4>
                                 <p>Authors Worldwide</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="contact-Chloe-card">
-                        <img src="hello.jpeg" alt="Chloe Victoria Reynolds">
-                        <div class="contact-Chloe-info">
+
+                    <div class="contact-chloe-card">
+                        <img src="hello.jpeg" alt="Chloe Victoria Reynolds - Ready to help you achieve bestseller status" loading="lazy">
+                        <div class="contact-chloe-info">
                             <h4>Chloe Victoria Reynolds</h4>
                             <p>Elite Book Marketing Specialist<br>30+ Bestsellers Launched Since 2021</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form-wrapper reveal-right">
                     <h3>Start Your Project</h3>
                     <p>Fill out the form below with details about your book and goals. I'll personally review every submission and respond within 24 hours.</p>
-                    
-                    <form action="https://formspree.io/f/xgonpzzg" method="POST">
+
+                    <form id="contactForm" action="https://formspree.io/f/xgonpzzg" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Your Full Name *</label>
-                                <input type="text" id="name" name="name" required placeholder="Jane Smith">
+                                <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name">
                             </div>
                             <div class="form-group">
                                 <label for="email">Your Email Address *</label>
-                                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                                <input type="email" id="email" name="email" required placeholder="jane@example.com" autocomplete="email">
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="bookTitle">Book Title *</label>
@@ -3910,7 +3753,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="stage">Where Are You in the Process? *</label>
@@ -3936,19 +3779,19 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="goals">Your Goals — Be Specific *</label>
+                            <label for="goals">Your Goals &mdash; Be Specific *</label>
                             <textarea id="goals" name="goals" required placeholder="Tell me exactly what success looks like for you. Examples: Hit #1 in my category, sell 10,000 copies in first month, make USA Today bestseller list, generate speaking opportunities, sell foreign rights, quit my day job and write full-time, etc. The more specific, the better I can help."></textarea>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="message">Tell Me More About Your Book & Situation</label>
+                            <label for="message">Tell Me More About Your Book &amp; Situation</label>
                             <textarea id="message" name="message" placeholder="Share anything else that would help me understand your project: Your book's premise, your current platform (if any), previous marketing you've tried, your timeline, concerns or questions you have, etc. The more context you give me, the more useful my response will be."></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn-submit">
-                            <span>Send Message & Start the Conversation</span>
+
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span>Send Message &amp; Start the Conversation</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -3959,51 +3802,49 @@
         </div>
     </section>
 
-    <!-- =============================================
-         FOOTER
-    ============================================= -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <h3>Chloe Anne <span>Foster</span></h3>
+                    <h3>Chloe Victoria <span>Reynolds</span></h3>
                     <p>Elite Book Marketing Specialist helping serious authors hit Amazon Top 100 without paid ads or a giant platform. 30+ bestsellers launched since 2021, generating over $2 million in author revenue.</p>
-                    <a href="mailto:chloevictoriareynolds@gmail.com" class="footer-email">
-                        <span>📧</span>
+                    <a href="mailto:chloevictoriareynolds@gmail.com" class="footer-email" aria-label="Email Chloe Victoria Reynolds">
+                        <span>&#128231;</span>
                         chloevictoriareynolds@gmail.com
                     </a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">→ Home</a></li>
-                        <li><a href="#about">→ About Me</a></li>
-                        <li><a href="#services">→ Services</a></li>
-                        <li><a href="#testimonials">→ Success Stories</a></li>
+                        <li><a href="#home">&#8594; Home</a></li>
+                        <li><a href="#about">&#8594; About Me</a></li>
+                        <li><a href="#services">&#8594; Services</a></li>
+                        <li><a href="#testimonials">&#8594; Success Stories</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>More</h4>
                     <ul class="footer-links">
-                        <li><a href="#faq">→ FAQ</a></li>
-                        <li><a href="#contact">→ Contact</a></li>
+                        <li><a href="#faq">&#8594; FAQ</a></li>
+                        <li><a href="#contact">&#8594; Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">→ Launch Blueprint</a></li>
-                        <li><a href="#services">→ Done-For-You Launch</a></li>
-                        <li><a href="#services">→ Evergreen Systems</a></li>
+                        <li><a href="#services">&#8594; Launch Blueprint</a></li>
+                        <li><a href="#services">&#8594; Done-For-You Launch</a></li>
+                        <li><a href="#services">&#8594; Evergreen Systems</a></li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>© 2024 Chloe Victoria Reynolds. All Rights Reserved. | Transforming Books Into Bestsellers.</p>
+                <p>&copy; 2024 Chloe Victoria Reynolds. All Rights Reserved. | Transforming Books Into Bestsellers.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -4012,251 +3853,327 @@
         </div>
     </footer>
 
-    <!-- =============================================
-         SCROLL TO TOP BUTTON
-    ============================================= -->
-    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top of page">
         <svg viewBox="0 0 24 24">
             <path d="M12 4l-8 8h5v8h6v-8h5z"/>
         </svg>
-    </div>
+    </button>
 
-    <!-- =============================================
-         JAVASCRIPT
-    ============================================= -->
+    <!-- JAVASCRIPT -->
     <script>
         // ==========================================
-        // PRELOADER
+        // PRELOADER - Smart loading (not fixed delay)
         // ==========================================
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('preloader').classList.add('loaded');
-            }, 2000);
-        });
+        (function() {
+            const preloader = document.getElementById('preloader');
+            const minDisplayTime = 1200;
+            const startTime = Date.now();
+
+            function hidePreloader() {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(0, minDisplayTime - elapsed);
+                setTimeout(function() {
+                    preloader.classList.add('loaded');
+                }, remaining);
+            }
+
+            if (document.readyState === 'complete') {
+                hidePreloader();
+            } else {
+                window.addEventListener('load', hidePreloader);
+            }
+        })();
 
         // ==========================================
-        // NAVBAR SCROLL EFFECT
+        // CONSOLIDATED SCROLL HANDLER
         // ==========================================
-        let lastScrollY = window.scrollY;
-        
-        window.addEventListener('scroll', function() {
+        (function() {
             const navbar = document.getElementById('navbar');
-            const scrollTop = document.getElementById('scrollTop');
-            const currentScrollY = window.scrollY;
-            
-            // Navbar background
-            if (currentScrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+            const scrollTopBtn = document.getElementById('scrollTop');
+            const sections = document.querySelectorAll('section[id]');
+
+            function onScroll() {
+                const currentScrollY = window.scrollY;
+
+                // Navbar background
+                if (currentScrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Scroll to top button
+                if (currentScrollY > 600) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+
+                // Active nav link highlighting
+                sections.forEach(function(section) {
+                    const sectionHeight = section.offsetHeight;
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionId = section.getAttribute('id');
+
+                    if (currentScrollY > sectionTop && currentScrollY <= sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-links a').forEach(function(link) {
+                            link.style.color = '';
+                        });
+                        const activeLink = document.querySelector('.nav-links a[href="#' + sectionId + '"]');
+                        if (activeLink && !activeLink.classList.contains('nav-cta')) {
+                            activeLink.style.color = 'var(--accent-gold)';
+                        }
+                    }
+                });
             }
-            
-            // Scroll to top button
-            if (currentScrollY > 600) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-            
-            lastScrollY = currentScrollY;
-        });
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
 
         // ==========================================
         // MOBILE MENU TOGGLE
         // ==========================================
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
+        (function() {
             const hamburger = document.getElementById('hamburger');
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (navLinks.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
+            const navLinks = document.getElementById('navLinks');
 
-        function closeMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const hamburger = document.getElementById('hamburger');
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+            hamburger.addEventListener('click', function() {
+                const isActive = navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                hamburger.setAttribute('aria-expanded', isActive);
+                document.body.style.overflow = isActive ? 'hidden' : '';
+            });
+
+            // Close menu when clicking nav links
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        })();
 
         // ==========================================
         // SCROLL TO TOP
         // ==========================================
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // ==========================================
-        // FAQ ACCORDION
+        // FAQ ACCORDION - Proper accessible version
         // ==========================================
-        function toggleFaq(element) {
-            const faqItem = element.parentElement;
-            const allFaqItems = document.querySelectorAll('.faq-item');
-            
-            // Close all other FAQ items
-            allFaqItems.forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
+        (function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(function(question) {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const isActive = faqItem.classList.contains('active');
+
+                    // Close all other FAQ items
+                    document.querySelectorAll('.faq-item').forEach(function(item) {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                            item.querySelector('.faq-answer').style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    if (isActive) {
+                        faqItem.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                        answer.style.maxHeight = null;
+                    } else {
+                        faqItem.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+        })();
+
+        // ==========================================
+        // INTERSECTION OBSERVER - Scroll Reveal
+        // ==========================================
+        (function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+
+        // ==========================================
+        // COUNTER ANIMATION - Fixed version
+        // ==========================================
+        (function() {
+            let countersAnimated = false;
+
+            function formatNumber(num, prefix, suffix, display) {
+                if (display) return display;
+
+                let formatted = '';
+                if (prefix) formatted += prefix;
+
+                if (num >= 1000000) {
+                    formatted += (num / 1000000).toFixed(0) + 'M';
+                } else if (num >= 1000) {
+                    formatted += (num / 1000).toFixed(0) + 'K';
+                } else {
+                    formatted += num.toLocaleString();
                 }
-            });
-            
-            // Toggle current FAQ item
-            faqItem.classList.toggle('active');
-        }
 
-        // ==========================================
-        // SCROLL REVEAL ANIMATIONS
-        // ==========================================
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-            const windowHeight = window.innerHeight;
-            
-            reveals.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
+                if (suffix) formatted += suffix;
+                return formatted;
+            }
+
+            function animateCounter(element, target, duration, prefix, suffix, display) {
+                let start = 0;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeProgress = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(easeProgress * target);
+
+                    element.textContent = formatNumber(current, prefix, suffix, progress >= 1 ? display : null);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
                 }
-            });
-        }
 
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
+                requestAnimationFrame(update);
+            }
+
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !countersAnimated) {
+                        countersAnimated = true;
+
+                        document.querySelectorAll('.result-stat-number[data-target]').forEach(function(counter) {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const prefix = counter.getAttribute('data-prefix') || '';
+                            const suffix = counter.getAttribute('data-suffix') || '';
+                            const display = counter.getAttribute('data-display') || '';
+
+                            if (!isNaN(target)) {
+                                animateCounter(counter, target, 2000, prefix, suffix, display);
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const resultsSection = document.querySelector('.results');
+            if (resultsSection) {
+                counterObserver.observe(resultsSection);
+            }
+        })();
 
         // ==========================================
         // SMOOTH SCROLL FOR NAVIGATION LINKS
         // ==========================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                
+                var target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 100;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
+                    var headerOffset = 100;
+                    var elementPosition = target.getBoundingClientRect().top;
+                    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ==========================================
+        // FORM SUBMISSION - AJAX with Formspree
+        // ==========================================
+        (function() {
+            var form = document.getElementById('contactForm');
+            var submitBtn = document.getElementById('submitBtn');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    var originalHTML = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span>Sending Your Message...</span>';
+                    submitBtn.classList.add('sending');
+
+                    var formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(function(response) {
+                        if (response.ok) {
+                            submitBtn.innerHTML = '<span>&#10003; Message Sent Successfully!</span>';
+                            submitBtn.classList.remove('sending');
+                            submitBtn.classList.add('sent');
+                            form.reset();
+
+                            setTimeout(function() {
+                                submitBtn.innerHTML = originalHTML;
+                                submitBtn.classList.remove('sent');
+                            }, 4000);
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(function(error) {
+                        submitBtn.innerHTML = '<span>Error - Please Try Again</span>';
+                        submitBtn.classList.remove('sending');
+
+                        setTimeout(function() {
+                            submitBtn.innerHTML = originalHTML;
+                        }, 3000);
                     });
-                }
-            });
-        });
-
-        // ==========================================
-        // PARALLAX EFFECT FOR PARTICLES
-        // ==========================================
-        window.addEventListener('scroll', function() {
-            const particles = document.querySelectorAll('.particle');
-            const scrolled = window.pageYOffset;
-            
-            particles.forEach((particle, index) => {
-                const speed = (index + 1) * 0.05;
-                const yPos = scrolled * speed;
-                particle.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-
-        // ==========================================
-        // INTERSECTION OBSERVER FOR BETTER PERFORMANCE
-        // ==========================================
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
-            observer.observe(el);
-        });
-
-        // ==========================================
-        // ACTIVE NAV LINK ON SCROLL
-        // ==========================================
-        const sections = document.querySelectorAll('section[id]');
-        
-        function highlightNavLink() {
-            const scrollY = window.pageYOffset;
-            
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 150;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.style.color = '';
-                    });
-                    
-                    const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-                    if (activeLink && !activeLink.classList.contains('nav-cta')) {
-                        activeLink.style.color = 'var(--accent-gold)';
-                    }
-                }
-            });
-        }
-
-        window.addEventListener('scroll', highlightNavLink);
-
-        // ==========================================
-        // FORM SUBMISSION FEEDBACK
-        // ==========================================
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                const btn = form.querySelector('.btn-submit');
-                const originalText = btn.innerHTML;
-                
-                btn.innerHTML = '<span>Sending Your Message...</span>';
-                btn.style.opacity = '0.8';
-                btn.style.pointerEvents = 'none';
-                
-                // Reset button after submission (Formspree handles redirect)
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.opacity = '1';
-                    btn.style.pointerEvents = 'auto';
-                }, 5000);
-            });
-        }
+                });
+            }
+        })();
 
         // ==========================================
         // LAZY LOAD IMAGES
         // ==========================================
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
+            var images = document.querySelectorAll('img[loading="lazy"]');
+
+            var imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
-                        const img = entry.target;
+                        var img = entry.target;
                         img.style.opacity = '1';
                         observer.unobserve(img);
                     }
                 });
             }, { threshold: 0.1 });
-            
-            images.forEach(img => {
+
+            images.forEach(function(img) {
                 img.style.opacity = '0';
                 img.style.transition = 'opacity 0.6s ease';
                 imageObserver.observe(img);
@@ -4264,93 +4181,11 @@
         });
 
         // ==========================================
-        // HOVER EFFECTS FOR INTERACTIVE ELEMENTS
+        // CONSOLE LOG
         // ==========================================
-        document.querySelectorAll('.service-item, .testimonial-card, .result-stat-card, .difference-card, .approach-step').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-            });
-        });
-
-        // ==========================================
-        // TYPED TEXT EFFECT FOR HERO (Optional Enhancement)
-        // ==========================================
-        function typeWriter(element, text, speed = 50, callback) {
-            let i = 0;
-            element.textContent = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else if (callback) {
-                    callback();
-                }
-            }
-            
-            type();
-        }
-
-        // ==========================================
-        // COUNTER ANIMATION FOR STATS
-        // ==========================================
-        function animateCounter(element, target, duration = 2000, suffix = '') {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            function updateCounter() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start).toLocaleString() + suffix;
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = target.toLocaleString() + suffix;
-                }
-            }
-            
-            updateCounter();
-        }
-
-        // Initialize counter animation when stats are visible
-        let countersAnimated = false;
-        
-        function checkCounters() {
-            if (countersAnimated) return;
-            
-            const resultsSection = document.querySelector('.results');
-            if (!resultsSection) return;
-            
-            const rect = resultsSection.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (isVisible) {
-                countersAnimated = true;
-                
-                // Animate each counter
-                const counters = document.querySelectorAll('.result-stat-number');
-                counters.forEach(counter => {
-                    const text = counter.textContent;
-                    const number = parseInt(text.replace(/[^0-9]/g, ''));
-                    const suffix = text.replace(/[0-9,]/g, '');
-                    
-                    if (!isNaN(number)) {
-                        animateCounter(counter, number, 2000, suffix);
-                    }
-                });
-            }
-        }
-
-        window.addEventListener('scroll', checkCounters);
-
-        // ==========================================
-        // CONSOLE LOG FOR SUCCESSFUL LOAD
-        // ==========================================
-        console.log('%c🚀 Chloe Victoria Reynolds - Elite Book Marketing Specialist', 'color: #c9a962; font-size: 16px; font-weight: bold;');
+        console.log('%c\ud83d\udcda Chloe Victoria Reynolds - Elite Book Marketing Specialist', 'color: #c9a962; font-size: 16px; font-weight: bold;');
         console.log('%cWebsite loaded successfully!', 'color: #b76e79; font-size: 12px;');
         console.log('%cTransforming Books Into Bestsellers Since 2021', 'color: #6a6a6a; font-size: 11px;');
-
     </script>
-
 </body>
 </html>
