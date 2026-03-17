@@ -4107,63 +4107,19 @@
         });
 
         // ==========================================
-        // FORM SUBMISSION - AJAX with Formspree
+        // FORM SUBMISSION - Direct submit to Formspree
         // ==========================================
         (function() {
             var form = document.getElementById('contactForm');
             var submitBtn = document.getElementById('submitBtn');
 
             if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    var originalHTML = submitBtn.innerHTML;
+                form.addEventListener('submit', function() {
                     submitBtn.innerHTML = '<span>Sending Your Message...</span>';
                     submitBtn.style.opacity = '0.8';
                     submitBtn.style.pointerEvents = 'none';
-
-                    var formData = new FormData(form);
-
-                    fetch('https://formspree.io/f/xgonpzzg', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(function(response) {
-                        if (response.ok) {
-                            return response.json();
-                        } else {
-                            return response.json().then(function(data) {
-                                throw new Error(data.error || 'Form submission failed');
-                            });
-                        }
-                    })
-                    .then(function(data) {
-                        submitBtn.innerHTML = '<span>&#10003; Message Sent Successfully!</span>';
-                        submitBtn.style.opacity = '1';
-                        submitBtn.style.pointerEvents = 'auto';
-                        submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #66BB6A)';
-                        form.reset();
-
-                        setTimeout(function() {
-                            submitBtn.innerHTML = originalHTML;
-                            submitBtn.style.background = '';
-                        }, 5000);
-                    })
-                    .catch(function(error) {
-                        console.error('Form error:', error);
-                        submitBtn.innerHTML = '<span>&#10007; Error - Please Try Again</span>';
-                        submitBtn.style.opacity = '1';
-                        submitBtn.style.pointerEvents = 'auto';
-                        submitBtn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
-
-                        setTimeout(function() {
-                            submitBtn.innerHTML = originalHTML;
-                            submitBtn.style.background = '';
-                        }, 4000);
-                    });
+                    // Form submits normally to Formspree (no preventDefault)
+                    // Formspree will show its own thank you page
                 });
             }
         })();
